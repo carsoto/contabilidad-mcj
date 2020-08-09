@@ -15,12 +15,17 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
+Route::get('/', function(){
+    if (Auth::guest()) {
+        return view('auth.login');
+    } else {
+        return view('home');
+    } 
+});
 
-Route::get('/', function () {
-    return view('home');
-})->middleware('auth');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 
 Route::get('password/reset', function () {
     return view('auth.passwords.reset');
 });
+
