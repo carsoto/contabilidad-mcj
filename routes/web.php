@@ -24,5 +24,3 @@ Route::get('/', function () {
 Route::get('password/reset', function () {
     return view('auth.passwords.reset');
 });
-
-Route::resource('users', 'UserController');

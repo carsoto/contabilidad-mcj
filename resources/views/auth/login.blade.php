@@ -48,11 +48,12 @@
             @csrf
 
             <div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">
-                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Usuario">
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                @if ($errors->has('email'))
+                <!--<input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Usuario">-->
+                <input id="username" type="text" class="form-control" name="username" value="{{ old('username') }}" required autofocus placeholder="Usuario">
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                @if ($errors->has('username'))
                     <span class="help-block">
-                    <strong>{{ $errors->first('email') }}</strong>
+                    <strong>{{ $errors->first('username') }}</strong>
                 </span>
                 @endif
             </div>
