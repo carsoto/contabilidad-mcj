@@ -13,19 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
+})->middleware('auth');
+
+Route::get('password/reset', function () {
+    return view('auth.passwords.reset');
 });
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-Auth::routes(['verify' => true]);
-
-Route::get('/home', 'HomeController@index')->middleware('verified');
+Route::resource('users', 'UserController');
