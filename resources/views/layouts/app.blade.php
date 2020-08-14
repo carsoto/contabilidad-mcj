@@ -2,31 +2,31 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="img/icon-logoMCJ.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="img/icon-logoMCJ.ico" type="image/x-icon"/>
+    <link rel="icon" href={{ asset("img/icon-logoMCJ.ico") }} type="image/x-icon"/>
+    <link rel="shortcut icon" href={{ asset("img/icon-logoMCJ.ico") }} type="image/x-icon"/>
 
     <title>{{ config('app.name') }}</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
     <!-- Bootstrap 3.3.7 -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap-toggle.min.css">
+    <link rel="stylesheet" href={{ asset("css/bootstrap.min.css") }}>
+    <link rel="stylesheet" href={{ asset("css/bootstrap-toggle.min.css") }}>
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href={{ asset("css/font-awesome.min.css") }}>
 
     <!-- Theme style -->
-    <link rel="stylesheet" href="css/AdminLTE.min.css">
-    <link rel="stylesheet" href="css/_all-skins.min.css">
+    <link rel="stylesheet" href={{ asset("css/AdminLTE.min.css") }}>
+    <link rel="stylesheet" href={{ asset("css/_all-skins.min.css") }}>
 
     <!-- iCheck -->
-    <link rel="stylesheet" href="css/_all.css">
+    <link rel="stylesheet" href={{ asset("css/_all.css") }}>
 
-    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href={{ asset("css/select2.min.css") }}>
 
     <!-- Ionicons -->
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href={{ asset("css/ionicons.min.css") }}>
+    <link rel="stylesheet" href={{ asset("css/bootstrap-datetimepicker.min.css") }}>
 
     @yield('css')
 </head>
@@ -141,16 +141,16 @@
     @endif
 
     <!-- jQuery 3.1.1 -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/moment.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/bootstrap-datetimepicker.min.js"></script>
-    <script src="js/bootstrap-toggle.min.js"></script>
+    <script src={{ asset("js/jquery.min.js") }}></script>
+    <script src={{ asset("js/moment.min.js") }}></script>
+    <script src={{ asset("js/bootstrap.min.js") }}></script>
+    <script src={{ asset("js/bootstrap-datetimepicker.min.js") }}></script>
+    <script src={{ asset("js/bootstrap-toggle.min.js") }}></script>
     
     <!-- AdminLTE App -->
-    <script src="js/adminlte.min.js"></script>
-    <script src="js/icheck.min.js"></script>
-    <script src="js/select2.min.js"></script>
+    <script src={{ asset("js/adminlte.min.js") }}></script>
+    <script src={{ asset("js/icheck.min.js") }}></script>
+    <script src={{ asset("js/select2.min.js") }}></script>
 
     @stack('scripts')
 </body>
